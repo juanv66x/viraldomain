@@ -8,6 +8,14 @@
 \description{
 Provides methods for assessing the applicability domain of models that predict viral load and CD4 (Cluster of Differentiation 4) lymphocyte counts. These methods help determine the extent of extrapolation when making predictions.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/juanv66x/viraldomain}
+  \item Report bugs at \url{https://github.com/juanv66x/viraldomain/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Juan Pablo Acuña González \email{acua6307@gmail.mx} (\href{https://orcid.org/0009-0003-6029-6560}{ORCID})
 
