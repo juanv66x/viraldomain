@@ -29,3 +29,5 @@ Imports:
     stats,
     tidyselect,
     workflows
+URL: https://github.com/juanv66x/viraldomain
+BugReports: https://github.com/juanv66x/viraldomain/issues
