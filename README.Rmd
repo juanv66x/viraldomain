@@ -36,6 +36,8 @@ devtools::install_github("juanv66x/viraldomain")
 This data set serves as input for predictive modeling tasks related to HIV research. It contains numeric measurements of CD4 lymphocyte counts (cd) and viral load (vl) at three different time points: 2019, 2021, and 2022. These measurements are crucial indicators of HIV disease progression.
 
 ```{r viral}
+library(viraldomain)
+
 data(viral)
 print(head(viral))
 ```
@@ -49,4 +51,21 @@ data(sero)
 print(head(sero))
 ```
 
+## Functions
+
+### knn_domain_score
+
+This function fits a K-Nearest Neighbor (KNN) model to the provided data and computes a domain applicability score based on PCA distances.
+
+```{r knn}
+# Example usage of knn_domain_score
+domain_scores <- knn_domain_score(
+  featured = "cd_2022",
+  train_data = viral |> dplyr::select(cd_2022, vl_2022),
+  knn_hyperparameters = list(neighbors = 5, weight_func = "optimal", dist_power = 0.33),
+  test_data = sero,
+  threshold_value = 0.99
+)
+print(domain_scores)
+```
 

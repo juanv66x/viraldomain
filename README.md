@@ -31,6 +31,8 @@ HIV research. It contains numeric measurements of CD4 lymphocyte counts
 progression.
 
 ``` r
+library(viraldomain)
+
 data(viral)
 print(head(viral))
 #>    cd_2019     vl_2019  cd_2021    vl_2021  cd_2022      vl_2022
@@ -59,4 +61,37 @@ print(head(sero))
 #> 4 515.9214  -15.630209
 #> 5 152.9998   -1.104756
 #> 6 382.8012 3105.038849
+```
+
+## Functions
+
+### knn_domain_score
+
+This function fits a K-Nearest Neighbor (KNN) model to the provided data
+and computes a domain applicability score based on PCA distances.
+
+``` r
+# Example usage of knn_domain_score
+domain_scores <- knn_domain_score(
+  featured = "cd_2022",
+  train_data = viral |> dplyr::select(cd_2022, vl_2022),
+  knn_hyperparameters = list(neighbors = 5, weight_func = "optimal", dist_power = 0.33),
+  test_data = sero,
+  threshold_value = 0.99
+)
+print(domain_scores)
+#> # A tibble: 53 × 3
+#>    .pred distance distance_pctl
+#>    <dbl>    <dbl>         <dbl>
+#>  1  591.    0.438         20.3 
+#>  2  332.    1.35          70.7 
+#>  3  330.    1.02          60.7 
+#>  4  354.    0.332          3.60
+#>  5  467.    1.38          74.9 
+#>  6  350.    0.425          7.57
+#>  7  528.    1.11          66.5 
+#>  8  336.    0.346          3.98
+#>  9  528.    0.568         24.5 
+#> 10  332.    0.664         38.0 
+#> # ℹ 43 more rows
 ```
