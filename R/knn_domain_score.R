@@ -3,7 +3,7 @@
 #' This function fits a K-Nearest Neighbor (KNN) model to the provided data
 #' and computes a domain applicability score based on PCA distances.
 #'
-#' @param featured The name of the response variable to predict.
+#' @param featured_col The name of the response variable to predict.
 #' @param train_data The training dataset containing predictor variables and the response variable.
 #' @param knn_hyperparameters A list of hyperparameters for the KNN model, including:
 #'   - \code{neighbors}: The number of neighbors to consider.
@@ -19,7 +19,7 @@
 #' @examples
 #' set.seed(123)
 #' library(dplyr)
-#' featured <- "cd_2022"
+#' featured_col <- "cd_2022"
 #' # Specifying features for training and testing procedures
 #' train_data = viral |>
 #'   dplyr::select(cd_2022, vl_2022)
@@ -27,13 +27,12 @@
 #' knn_hyperparameters <- list(neighbors = 5, weight_func = "optimal", dist_power = 0.3304783)
 #' threshold_value <- 0.99
 #' # Call the function
-#' knn_domain_score(featured, train_data, knn_hyperparameters, test_data, threshold_value)
-knn_domain_score <- function(featured, train_data, knn_hyperparameters, test_data, threshold_value) {
+knn_domain_score <- function(featured_col, train_data, knn_hyperparameters, test_data, threshold_value) {
   workflows::workflow() |>
     workflows::add_recipe(
       recipes::recipe(
         stats::as.formula(
-          paste(featured, "~ .")
+          paste(featured_col, "~ .")
         ),
         data = train_data
       )

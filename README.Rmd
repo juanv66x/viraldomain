@@ -68,4 +68,3 @@ domain_scores <- knn_domain_score(
 )
 print(domain_scores)
 ```
-

@@ -10,8 +10,11 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Suggests: 
+    earth,
     kknn,
-    testthat (>= 3.0.0)
+    nnet,
+    testthat (>= 3.0.0),
+    vdiffr
 Config/testthat/edition: 3
 Depends: 
     R (>= 2.10)
@@ -19,6 +22,7 @@ LazyData: true
 Imports: 
     applicable,
     dplyr,
+    ggplot2,
     parsnip,
     recipes,
     stats,
