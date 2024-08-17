@@ -18,15 +18,6 @@ You can install the development version of viraldomain from GitHub with:
 ``` r
 # install.packages("devtools")
 devtools::install_github("juanv66x/viraldomain")
-#> ── R CMD build ─────────────────────────────────────────────────────────────────
-#>      checking for file ‘/tmp/RtmpNGE5ho/remotes318010cfc070/juanv66x-viraldomain-1b309ce/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpNGE5ho/remotes318010cfc070/juanv66x-viraldomain-1b309ce/DESCRIPTION’ (381ms)
-#>   ─  preparing ‘viraldomain’:
-#>    checking DESCRIPTION meta-information ...  ✔  checking DESCRIPTION meta-information
-#>   ─  checking for LF line-endings in source and make files and shell scripts
-#>   ─  checking for empty or unneeded directories
-#>   ─  building ‘viraldomain_0.0.0.9000.tar.gz’
-#>      
-#> 
 ```
 
 ## Data
