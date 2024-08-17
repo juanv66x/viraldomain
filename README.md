@@ -20,7 +20,7 @@ You can install the development version of viraldomain from GitHub with:
 devtools::install_github("juanv66x/viraldomain")
 #> 
 #> ── R CMD build ─────────────────────────────────────────────────────────────────
-#>      checking for file ‘/tmp/RtmpG3gmSA/remotes92353ceb7dac/juanv66x-viraldomain-54ae1c5/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/RtmpG3gmSA/remotes92353ceb7dac/juanv66x-viraldomain-54ae1c5/DESCRIPTION’ (380ms)
+#>      checking for file ‘/tmp/Rtmp6medQX/remotesa89540251f8f/juanv66x-viraldomain-1983b42/DESCRIPTION’ ...  ✔  checking for file ‘/tmp/Rtmp6medQX/remotesa89540251f8f/juanv66x-viraldomain-1983b42/DESCRIPTION’ (363ms)
 #>   ─  preparing ‘viraldomain’:
 #> ✔  checking DESCRIPTION meta-information
 #>   ─  checking for LF line-endings in source and make files and shell scripts
@@ -105,3 +105,20 @@ print(domain_scores)
 #> 10  332.    0.664         38.0 
 #> # ℹ 43 more rows
 ```
+
+### simple_domain_plot
+
+This function generates a domain plot for a simple model based on PCA
+distances of the provided data.
+
+``` r
+# Example usage of simple_domain_plot
+simple_domain_plot(
+  featured_col = "cd_2022",
+  train_data = viral |> dplyr::select(cd_2022, vl_2022),
+  test_data = sero,
+  treshold_value = 0.99
+)
+```
+
+<img src="man/figures/README-simp-1.png" width="100%" />
