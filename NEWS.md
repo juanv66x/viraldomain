@@ -17,3 +17,5 @@
 * Implemented `simple_domain_plot` function to generate a domain plot for a simple model based on PCA distances. This function provides a visual representation of the domain applicability for the given data.
 
 * Implemented `rf_domain_score` function for calculating domain applicability scores based on Random Forest models.
+
+* Implemented `normalized_domain_plot` function to generate a domain plot for a normalized model based on PCA distances.

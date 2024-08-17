@@ -3,5 +3,6 @@
 export(knn_domain_score)
 export(mars_domain_score)
 export(nn_domain_score)
+export(normalized_domain_plot)
 export(rf_domain_score)
 export(simple_domain_plot)
