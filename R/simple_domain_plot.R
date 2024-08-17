@@ -13,6 +13,7 @@
 #' @export
 #'
 #' @examples
+#' set.seed(123)
 #' library(dplyr)
 #' # Specifying featured column
 #' featured_col = "cd_2022"

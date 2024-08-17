@@ -23,6 +23,7 @@ This function generates a domain plot for a simple model based on PCA
 distances of the provided data.
 }
 \examples{
+set.seed(123)
 library(dplyr)
 # Specifying featured column
 featured_col = "cd_2022"

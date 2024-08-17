@@ -1,5 +1,6 @@
 test_that("`simple_domain_plot()` plots as expected", {
   local_edition(3)
+  set.seed(123)
   library(dplyr)
   library(vdiffr)
   featured_col = "cd_2022"
