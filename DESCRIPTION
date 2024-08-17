@@ -1,6 +1,6 @@
 Package: viraldomain
 Title: Applicability Domain Methods of Viral Load and CD4 Lymphocytes
-Version: 0.0.0.9000
+Version: 0.0.5
 Authors@R: 
     person("Juan Pablo", "Acuña González", , "acua6307@gmail.mx", role = c("aut", "cre"),
            comment = c(ORCID = "0009-0003-6029-6560"))
