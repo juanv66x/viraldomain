@@ -51,7 +51,7 @@ data(sero)
 print(head(sero))
 ```
 
-## Functions
+## Function
 
 ### knn_domain_score
 
